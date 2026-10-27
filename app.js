@@ -23,19 +23,7 @@ document.querySelectorAll('.url-form').forEach(form => {
       input.reportValidity();
       return;
     }
-    const fragment = document.createDocumentFragment();
-    const intro = document.createElement('p');
-    intro.textContent = 'URLの入力を確認しました。';
-    const address = document.createElement('p');
-    address.className = 'submitted-url';
-    address.textContent = url.href;
-    const note = document.createElement('p');
-    note.textContent = '現在はデザインプレビューです。診断APIは未接続のため、AIっぽさの解析やスコアの算出は行いません。入力したURLは外部に送信・保存されません。';
-    const contact = document.createElement('a');
-    contact.href = 'mailto:contact@onebe-create.com?subject=' + encodeURIComponent('Webサイト改善のご相談');
-    contact.textContent = 'サイト改善についてOneBeに相談する →';
-    fragment.append(intro, address, note, contact);
-    showDialog('診断のプレビュー', fragment);
+    location.href = 'report.html#url=' + encodeURIComponent(url.href);
   });
   form.elements.url.addEventListener('input', () => form.elements.url.setCustomValidity(''));
 });
@@ -65,3 +53,9 @@ document.querySelectorAll('a[href="#diagnosis"]').forEach(link => link.addEventL
   document.querySelector('#diagnosis input').focus({preventScroll:true});
   document.querySelector('#top').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
 }));
+if (location.hash === '#diagnosis' || new URLSearchParams(location.search).has('focus')) {
+  window.addEventListener('pageshow', () => {
+    document.querySelector('#top').scrollIntoView({behavior:'instant'});
+    document.querySelector('#diagnosis input').focus({preventScroll:true});
+  });
+}

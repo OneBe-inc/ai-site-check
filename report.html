@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0068ff"><meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="OneBe AIっぽさ診断のレポート画面。AIっぽさとAI検索への伝わりやすさを確認するデザインサンプルです。">
+  <title>診断結果のサンプル | AIっぽさ診断 | OneBe</title>
+  <link rel="icon" href="assets/onebe-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="report.css"><script src="report.js" defer></script>
+</head>
+<body class="report-page">
+  <a class="skip-link" href="#report-main">診断レポートへスキップ</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="r-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="r-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8m-8 4h6M8 8h2"/></symbol>
+    <symbol id="r-pen" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20l2-7L17 2l5 5-11 11-7 2zm3-7 4 5M4 20l3-3"/></symbol>
+    <symbol id="r-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="m3 17 6-7 5 5 4-4 3 4"/><circle cx="16" cy="7" r="1"/></symbol>
+    <symbol id="r-window" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20M6 6h.1M10 6h.1"/></symbol>
+    <symbol id="r-chart" viewBox="0 0 32 32"><path fill="currentColor" stroke="none" d="M4 28V18h6v10zm10 0V10h6v18zm10 0V2h6v26z"/></symbol>
+    <symbol id="r-check" viewBox="0 0 24 24"><path d="m6 12 4 4 8-9"/></symbol>
+    <symbol id="r-external" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14m0-10H4v17h17v-6"/></symbol>
+    <symbol id="r-bulb" viewBox="0 0 24 24"><path d="M8 14a6 6 0 1 1 8 0l-2 3h-4zm2 6h4m-3 2h2"/></symbol>
+    <symbol id="r-thumb" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M2 10h4v12H2zm6 1 5-9c3 0 3 4 1 7h6c2 0 2 2 1 5l-2 7H8z"/></symbol>
+  </defs></svg>
+  <header class="report-header"><div class="report-wrap"><a class="brand" href="index.html" aria-label="OneBe ホーム"><img src="assets/onebe-logo.svg" width="467" height="111" alt="OneBe"></a><span class="report-service">AIっぽさ診断</span><nav aria-label="レポートナビゲーション"><a href="index.html#about">診断について</a><a class="outline-button" href="index.html?focus=1#top">別のサイトを診断 <svg aria-hidden="true"><use href="#r-arrow"/></svg></a></nav></div></header>
+  <main id="report-main" class="report-main">
+    <div class="report-wrap">
+      <nav class="breadcrumb" aria-label="パンくずリスト"><a href="index.html">ホーム</a><span aria-hidden="true">/</span><span aria-current="page">診断結果</span><span class="sample-badge">デザインサンプル</span></nav>
+      <p class="submitted-notice" id="submitted-notice" hidden></p>
+      <div class="report-intro"><h1>あなたのサイトの診断結果</h1><p>AIっぽさと、AI検索への伝わりやすさをチェックしました。</p></div>
+      <section class="site-card report-card" aria-label="サンプル診断の対象サイト">
+        <a class="site-thumbnail" href="https://isseimasuya.github.io/vaizo-fv-paper-peel/" target="_blank" rel="noopener noreferrer"><img src="assets/report-site.webp" width="254" height="116" alt="VAIZOのWebサイト。AIを事業を変える力に。" fetchpriority="high"></a>
+        <div class="site-information"><h2>VAIZO</h2><a class="site-url" href="https://isseimasuya.github.io/vaizo-fv-paper-peel/" target="_blank" rel="noopener noreferrer">https://isseimasuya.github.io/vaizo-fv-paper-peel/ <svg aria-hidden="true"><use href="#r-external"/></svg></a><div class="site-meta"><span>PC・スマホ</span><span>対象：1ページ</span><p>診断日：<time datetime="2026-10-27">2026.10.27</time></p></div></div>
+      </section>
+      <section class="score-grid" aria-label="総合スコアの表示サンプル">
+        <article class="score-card report-card"><div class="score-heading"><span class="report-icon"><svg aria-hidden="true"><use href="#r-file"/></svg></span><div><h2>AIっぽさスコア</h2><p>低いほど、定型的な印象が少ない</p></div></div><div class="score-body"><div class="score-ring" role="img" aria-label="AIっぽさスコアの表示例、100点中35点"><svg viewBox="0 0 160 160" aria-hidden="true"><circle class="ring-track" cx="80" cy="80" r="66"/><circle class="ring-progress" cx="80" cy="80" r="66"/></svg><div class="score-number"><strong>35</strong><span>/100</span></div></div><p class="score-callout"><span class="status-mark warning" aria-hidden="true">!</span><span>一部にAIらしい<br>印象があります</span></p></div></article>
+        <article class="score-card report-card"><div class="score-heading"><span class="report-icon"><svg aria-hidden="true"><use href="#r-chart"/></svg></span><div><h2>AIOスコア</h2><p>高いほど、AI検索への準備が整っている</p></div></div><div class="score-body"><div class="score-ring" role="img" aria-label="AIOスコアの表示例、100点中35点"><svg viewBox="0 0 160 160" aria-hidden="true"><circle class="ring-track" cx="80" cy="80" r="66"/><circle class="ring-progress" cx="80" cy="80" r="66"/></svg><div class="score-number"><strong>35</strong><span>/100</span></div></div><p class="score-callout"><span class="status-mark warning" aria-hidden="true">!</span><span>具体的な情報の<br>補強が必要です</span></p></div></article>
+      </section>
+      <section class="diagnostic-point" aria-labelledby="point-heading"><img src="assets/report-advisor.webp" width="216" height="167" alt="診断ポイントを案内するアドバイザー"><div><span class="blue-label">今回の診断ポイント</span><h2 id="point-heading">デザインの個性は十分。事業の具体性を、もう一歩。</h2><p>紙の表現と文字組みは印象的です。写真と説明に、VAIZOならではの情報を加えましょう。</p></div></section>
+      <section class="item-section" aria-labelledby="items-title"><h2 class="section-title" id="items-title">項目別の診断</h2><div class="item-grid">
+        <article class="tendency-card report-card"><h3><span class="report-icon small"><svg aria-hidden="true"><use href="#r-file"/></svg></span>AIっぽさの傾向</h3><div class="tendency-table">
+          <div class="tendency-row"><svg aria-hidden="true"><use href="#r-file"/></svg><strong>文章</strong><span class="tendency-bar" role="img" aria-label="文章のAIっぽさの傾向：やや定型的"><i style="--fill:45%"></i></span><span>やや定型的</span></div>
+          <div class="tendency-row"><svg aria-hidden="true"><use href="#r-pen"/></svg><strong>デザイン</strong><span class="tendency-bar" role="img" aria-label="デザインのAIっぽさの傾向：定型感は低め"><i style="--fill:20%"></i></span><span>定型感は低め</span></div>
+          <div class="tendency-row"><svg aria-hidden="true"><use href="#r-image"/></svg><strong>写真・画像</strong><span class="tendency-bar" role="img" aria-label="写真・画像のAIっぽさの傾向：見直しの余地あり"><i style="--fill:60%"></i></span><span>見直しの余地あり</span></div>
+          <div class="tendency-row"><svg aria-hidden="true"><use href="#r-window"/></svg><strong>UI</strong><span class="tendency-bar" role="img" aria-label="UIのAIっぽさの傾向：定型感は低め"><i style="--fill:20%"></i></span><span>定型感は低め</span></div>
+        </div><p class="table-note">数字の書体は、周囲のデザインと調和しています。</p></article>
+        <article class="aio-card report-card"><h3><span class="report-icon small"><svg aria-hidden="true"><use href="#r-chart"/></svg></span>AIOのチェック項目</h3><dl class="check-list">
+          <div><dt><span class="status-mark success" aria-hidden="true"><svg><use href="#r-check"/></svg></span>本文の取得</dt><dd>良好</dd></div>
+          <div><dt><span class="status-mark success" aria-hidden="true"><svg><use href="#r-check"/></svg></span>事業の明確さ</dt><dd>概ね良好</dd></div>
+          <div><dt><span class="status-mark warning" aria-hidden="true">!</span>説明の具体性</dt><dd>情報を補強</dd></div>
+          <div><dt><span class="status-mark warning" aria-hidden="true">!</span>実績・根拠</dt><dd>情報を補強</dd></div>
+          <div><dt><span class="status-mark danger" aria-hidden="true">!</span>詳細への導線</dt><dd>要改善</dd></div>
+          <div><dt><span class="status-mark neutral" aria-hidden="true">−</span>情報の更新管理</dt><dd>未確認</dd></div>
+        </dl></article>
+      </div></section>
+      <aside class="index-notice"><span class="status-mark warning" aria-hidden="true">!</span><strong>公開設定：noindex</strong><span>検証用ページのため、検索対象外の設定です。</span></aside>
+      <section class="improvement-section" aria-labelledby="improvement-title"><h2 class="section-title" id="improvement-title">優先して改善したい3つのポイント</h2><ol class="improvement-list">
+        <li class="report-card"><span class="improvement-number" aria-hidden="true">01</span><div class="improvement-content"><h3>写真と事業のつながりを強める <span class="topic-tag">AIっぽさ</span></h3><p>模型づくりの写真だけでは、AI開発・育成・M&amp;Aとの関係が伝わりにくい状態です。</p><p class="suggestion"><svg aria-hidden="true"><use href="#r-bulb"/></svg><span><strong>改善するなら：</strong>実際の業務画面や支援の場面を加える。</span></p></div><span class="priority high">優先度 高</span></li>
+        <li class="report-card"><span class="improvement-number" aria-hidden="true">02</span><div class="improvement-content"><h3>3つの事業に、具体的な説明を加える <span class="topic-tag">AIO</span></h3><p>誰に、何を、どこまで提供するかを各事業に追記しましょう。</p><p class="suggestion"><svg aria-hidden="true"><use href="#r-bulb"/></svg><span><strong>改善するなら：</strong>対象・課題・提供内容を短く整理する。</span></p></div><span class="priority high">優先度 高</span></li>
+        <li class="report-card"><span class="improvement-number" aria-hidden="true">03</span><div class="improvement-content"><h3>各事業から、詳しい説明へつなぐ <span class="topic-tag">AIO</span></h3><p>3つの事業リンクが同じトップページに移動しています。</p><p class="suggestion"><svg aria-hidden="true"><use href="#r-bulb"/></svg><span><strong>改善するなら：</strong>事業ごとの詳細ページへ案内する。</span></p></div><span class="priority medium">優先度 中</span></li>
+      </ol></section>
+      <section class="positive-section" aria-labelledby="positive-title"><h2 id="positive-title"><svg aria-hidden="true"><use href="#r-thumb"/></svg>そのまま活かしたい、良いところ</h2><ul><li><span class="status-mark success" aria-hidden="true"><svg><use href="#r-check"/></svg></span>紙と文字の表現に一貫性がある</li><li><span class="status-mark success" aria-hidden="true"><svg><use href="#r-check"/></svg></span>主要なコピーと事業名がHTMLの文字で読める</li></ul></section>
+    </div>
+    <section class="report-contact"><div class="report-wrap"><div><h2>改善の進め方も、OneBeに相談できます。</h2><p>診断結果をもとに、具体的な改善施策をご提案します。</p></div><a class="button" href="mailto:contact@onebe-create.com?subject=Webサイト改善のご相談">改善について相談する <svg aria-hidden="true"><use href="#r-arrow"/></svg></a><a class="diagnose-again" href="index.html?focus=1#top">別のサイトを診断する <svg aria-hidden="true"><use href="#r-arrow"/></svg></a><img src="assets/report-contact.webp" width="151" height="104" alt="OneBeのアドバイザー" loading="lazy"></div></section>
+  </main>
+  <footer class="report-footer report-wrap"><a class="brand" href="index.html" aria-label="OneBe ホーム"><img src="assets/onebe-logo.svg" width="467" height="111" alt="OneBe" loading="lazy"></a><p>画面設計用サンプル ｜ スコアは試験診断の目安です。</p></footer>
+</body>
+</html>
+
