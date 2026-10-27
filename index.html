@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0068ff">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="WebサイトのAIっぽさを、文章・デザイン・写真や画像・UIの4つの視点から見直す、OneBeのAIっぽさ診断。デザインプレビュー。">
+  <title>AIっぽさ診断 | OneBe</title>
+  <link rel="icon" href="assets/onebe-logo.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/hero-art.webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="m9 15 6-6m-8 4-2 2a4 4 0 0 0 6 6l4-4a4 4 0 0 0 0-6m2 0 2-2a4 4 0 0 0-6-6L9 7a4 4 0 0 0 0 6"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8m-8 4h6M8 8h2"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20l2-7L17 2l5 5-11 11-7 2zm3-7 4 5M4 20l3-3"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="m3 17 6-7 5 5 4-4 3 4"/><circle cx="16" cy="7" r="1"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20M6 6h.1M10 6h.1"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 32 32"><path d="M4 28V18h5v10zm10 0V10h5v18zm10 0V2h5v26z"/></symbol>
+    <symbol id="i-people" viewBox="0 0 32 32"><circle cx="16" cy="8" r="5"/><circle cx="6" cy="11" r="4"/><circle cx="26" cy="11" r="4"/><path d="M9 30V21a7 7 0 0 1 14 0v9zM1 29v-8a5 5 0 0 1 6-5v13zm24 0V16a5 5 0 0 1 6 5v8z"/></symbol>
+    <symbol id="i-handshake" viewBox="0 0 32 32"><path d="m1 10 5-8 6 3-6 12zm30 0-5-8-6 3 6 12zM10 7l6-3 7 5-4 5-6-4-3 3-3-2zm-2 7 5-2 11 9-5 7-5-2-7-8zm8 4 5 4m-8-1 5 4"/></symbol>
+  </defs></svg>
+  <div class="first-view" id="top">
+    <header class="header wrap">
+      <a class="brand" href="#top" aria-label="OneBe ホーム"><img src="assets/onebe-logo.svg" width="467" height="111" alt="OneBe"></a>
+      <nav aria-label="メインナビゲーション"><a href="#about">AIっぽさ診断とは</a><button type="button" data-dialog="flow">診断の流れ</button><button type="button" data-dialog="pricing">料金・プラン</button><a href="#faq">よくある質問</a></nav>
+      <a class="button header-cta" href="#diagnosis">診断する <svg><use href="#i-arrow"/></svg></a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション" hidden><a href="#about">AIっぽさ診断とは</a><button data-dialog="flow">診断の流れ</button><button data-dialog="pricing">料金・プラン</button><a href="#faq">よくある質問</a></nav>
+    <main id="main" class="hero">
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="hero-inner wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">そのサイト、AIっぽく見えていませんか？</p>
+          <h1><span>AI</span>っぽさ診断</h1>
+          <p class="hero-description">WebサイトがどのくらいAIらしく見えるか<br>4つの視点で分析します。</p>
+          <ul class="categories" aria-label="診断の4つの視点">
+            <li><span><svg><use href="#i-file"/></svg></span>文章</li>
+            <li><span><svg><use href="#i-pen"/></svg></span>デザイン</li>
+            <li><span><svg><use href="#i-image"/></svg></span>写真・画像</li>
+            <li><span><svg><use href="#i-window"/></svg></span>UI</li>
+          </ul>
+          <form class="url-form" id="diagnosis">
+            <label class="url-field"><svg aria-hidden="true"><use href="#i-link"/></svg><span class="sr-only">診断したいサイトのURL</span><input type="url" name="url" required placeholder="https:// 診断したいサイトのURLを入力してください" autocomplete="url" inputmode="url" aria-describedby="privacy-note"></label>
+            <button type="submit" class="button">診断する <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </form>
+          <p class="form-note" id="privacy-note">※ 個人情報の入力は不要です。どなたでも無料で診断いただけます。</p>
+        </div>
+        <img class="hero-art" src="assets/hero-art.webp" width="531" height="450" alt="ノートパソコンを持つOneBeのアドバイザーと、文章・デザイン・写真・UIの診断イメージ" fetchpriority="high">
+      </div>
+    </main>
+  </div>
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="about-inner wrap">
+      <img class="advisor" src="assets/advisor.webp" width="348" height="324" alt="AIを怖がるのではなく、理解して活用することを提案するアドバイザー" loading="lazy" decoding="async">
+      <div class="about-copy">
+        <h2 id="about-title"><span>AI</span>を武器に変えよう。</h2>
+        <p>AIは、使い方次第でビジネスを大きく進化させる力を持っています。<br>OneBeの「AIっぽさ診断」で現状を知り、信頼・差別化・伝わる表現を<br class="desktop-break">手に入れ、自社らしい魅力をもっと届けましょう。</p>
+        <div class="benefits">
+          <article><svg aria-hidden="true"><use href="#i-handshake"/></svg><h3>信頼の向上</h3><p>AIっぽさを適切にコントロールし<br>人らしい温度感で安心感を提供。</p></article>
+          <article><svg aria-hidden="true"><use href="#i-chart"/></svg><h3>差別化につながる</h3><p>自社らしさが伝わる表現で<br>競合と差をつける。</p></article>
+          <article><svg aria-hidden="true"><use href="#i-people"/></svg><h3>伝わるコミュニケーション</h3><p>ターゲットに響く、<br>自然で魅力的な表現へ。</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="creative wrap" aria-labelledby="creative-title">
+    <div class="creative-copy">
+      <p class="creative-label">診断だけじゃない、OneBeのクリエイティブ支援</p>
+      <h2 id="creative-title">自社らしい<br>クリエイティブをつくる</h2>
+      <p>バナー、Webサイト、ビジュアル、ブランド設計まで。<br>貴社の想いや強みをカタチにし、伝わるクリエイティブで<br>ビジネスの成長をサポートします。</p>
+      <a class="button creative-cta" href="mailto:contact@onebe-create.com?subject=クリエイティブ制作のご相談">クリエイティブ制作のご相談はこちら <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <img src="assets/creative.webp" width="468" height="300" alt="Webサイト、バナー、スマートフォンサイトのクリエイティブ制作イメージ" loading="lazy" decoding="async">
+  </section>
+  <section class="faq wrap" id="faq" aria-labelledby="faq-title">
+    <div class="faq-heading"><h2 id="faq-title"><span class="faq-symbol" aria-hidden="true">FAQ</span>よくある質問</h2><p>診断に関するよくある質問をまとめました。</p><button class="all-faq" type="button">すべての質問を見る <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+    <div class="faq-grid">
+      <details><summary><span class="question">Q</span>どんなサイトでも診断できますか？<span class="plus" aria-hidden="true"></span></summary><p>一般公開されているWebサイトのURLを入力する想定です。ログインが必要なページや、閲覧制限のあるサイトは対象外です。現在はデザインプレビューのため、実際の解析は行いません。</p></details>
+      <details><summary><span class="question">Q</span>診断後に相談できますか？<span class="plus" aria-hidden="true"></span></summary><p>はい。Webサイトやデザインの改善について、OneBeへご相談いただけます。<a href="mailto:contact@onebe-create.com">メールで相談する</a></p></details>
+      <details><summary><span class="question">Q</span>料金はかかりますか？<span class="plus" aria-hidden="true"></span></summary><p>このデザインプレビューは無料でご覧いただけます。制作や改善のご依頼については、内容に応じて個別にご案内します。</p></details>
+      <details><summary><span class="question">Q</span>AIっぽさを改善するサポートはありますか？<span class="plus" aria-hidden="true"></span></summary><p>文章、デザイン、写真・画像、UIの見直しから、自社らしさを伝えるクリエイティブ制作までご相談いただけます。</p></details>
+      <details><summary><span class="question">Q</span>診断URLは保存されますか？<span class="plus" aria-hidden="true"></span></summary><p>このプレビューで入力したURLは、サーバーに送信・保存されません。入力内容は、この画面内の確認表示にのみ使用します。</p></details>
+    </div>
+  </section>
+  <section class="bottom-cta" aria-labelledby="cta-title">
+    <div class="wrap"><h2 id="cta-title">まずは、あなたのサイトのAIっぽさを診断してみませんか？</h2><p>AIとのちょうどいい付き合い方で、もっと伝わる、もっと選ばれるサイトへ。</p>
+      <form class="url-form"><label class="url-field"><svg aria-hidden="true"><use href="#i-link"/></svg><span class="sr-only">診断したいサイトのURL</span><input type="url" name="url" required placeholder="https:// 診断したいサイトのURLを入力してください" autocomplete="url" inputmode="url"></label><button type="submit" class="button">診断する <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></form>
+      <p class="form-note">※ 個人情報の入力は不要です。どなたでも無料で診断いただけます。</p>
+    </div>
+  </section>
+  <footer class="footer wrap"><a class="brand" href="#top" aria-label="OneBe ホーム"><img src="assets/onebe-logo.svg" width="467" height="111" alt="OneBe" loading="lazy"></a><nav aria-label="フッターナビゲーション"><a href="#about">AIっぽさ診断とは</a><button data-dialog="flow">診断の流れ</button><button data-dialog="pricing">料金・プラン</button><a href="#faq">よくある質問</a></nav><div class="footer-social" aria-label="OneBeへのお問い合わせ"><a href="mailto:contact@onebe-create.com" aria-label="メールでお問い合わせ">@</a></div></footer>
+  <dialog id="info-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="閉じる" type="button">×</button><p class="dialog-kicker">OneBe / AIっぽさ診断</p><h2 id="dialog-title"></h2><div id="dialog-body"></div><button class="button dialog-ok" type="button">閉じる <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></dialog>
+</body>
+</html>
